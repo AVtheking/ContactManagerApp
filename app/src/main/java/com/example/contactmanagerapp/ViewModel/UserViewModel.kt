@@ -51,8 +51,11 @@ class UserViewModel(private val repository: UserRepository):ViewModel(),androidx
     fun update(user:User)=viewModelScope.launch {
         repository.update(user)
     }
-    fun delele(user:User)=viewModelScope.launch {
+    fun delete(user:User)=viewModelScope.launch {
         repository.delete(user)
+    }
+    fun initUpdateOrDelete(user:User){
+
     }
 
     override fun addOnPropertyChangedCallback(callback: androidx.databinding.Observable.OnPropertyChangedCallback?) {

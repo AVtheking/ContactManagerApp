@@ -23,7 +23,6 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="42dp"
             android:layout_marginBottom="44dp"
-
             android:src="@drawable/add"
             app:backgroundTint="#5FE865"
             app:layout_constraintBottom_toBottomOf="parent"
