@@ -1,4 +1,4 @@
-package com.example.contactmanagerapp.room
+package com.mastercoding.contactsmanagerapp.room
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
@@ -8,19 +8,21 @@ import androidx.room.Query
 import androidx.room.Update
 
 @Dao
-interface UserDao {
+interface UserDAO {
 
     @Insert
-    suspend fun insertUser(user:User):Long
+    suspend fun insertUser(user: User):Long
 
     @Update
-    suspend fun updateUser(user:User)
+    suspend fun updateUser(user: User)
 
     @Delete
-    suspend fun deleteUser(user:User)
+    suspend fun deleteUser(user: User)
+
     @Query("DELETE FROM user")
     suspend fun deleteAll()
 
-    @Query("select*from user")
-    fun getallusers():LiveData<List<User>>
+    @Query("SELECT * FROM user")
+    fun getAllUsersInDB(): LiveData<List<User>>
+
 }

@@ -1,4 +1,4 @@
-package com.example.contactmanagerapp
+package com.mastercoding.contactsmanagerapp
 
 import org.junit.Test
 
